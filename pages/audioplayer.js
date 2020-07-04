@@ -17,7 +17,7 @@ export default class Player extends Component {
       selectedTrack: 0,
     };
   }
-
+ /*getting duration of the audio*/
   setDuration(data) {
     this.setState({totalLength: Math.floor(data.duration)})
   }
@@ -34,10 +34,12 @@ export default class Player extends Component {
       paused: false,
     });
   }
+/* Function when forward button is Pressed */
 onForward = ()=>{
   let len = this.props.tracks.length;
   this.setState({selectedTrack:(this.state.selectedTrack+1)%len,currentPosition:0})
 }
+/* Function when backward button is Pressed */
 onBack = ()=>{
   let new_track = this.state.selectedTrack - 1;
   if(new_track<0){

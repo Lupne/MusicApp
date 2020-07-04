@@ -1,9 +1,5 @@
 import React,{useState} from 'react';
 import {View,Text} from 'react-native';
-import AlbumArt from './pages/albumart'
-import TrackDetails from './pages/trackdetails'
-import SeekBar from './pages/seekbar'
-import Controls from './pages/controls'
 import Player from './pages/audioplayer'
 
 export default function App(){
@@ -27,7 +23,7 @@ export default function App(){
     },
   ]
   for(let i=0;i<TRACKS.length;i++){
-    TRACKS[i].id = i;
+    TRACKS[i].id = i; //Assigning ID to handle forward and backward button in Player
   }
   return (
     <View>

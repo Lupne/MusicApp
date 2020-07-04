@@ -18,16 +18,11 @@ function pad(n, width, z=0) {
 const minutesAndSeconds = (position) => ([
   pad(Math.floor(position / 60), 2),
   pad(position % 60, 2),
-]);
+]); //Function for getting miniutes and seconds from the duration
 
-const SeekBar = ({
-  trackLength,
-  currentPosition,
-  onSeek,
-  onSlidingStart,
-}) => {
-  const elapsed = minutesAndSeconds(currentPosition);
-  const remaining = minutesAndSeconds(trackLength - currentPosition);
+const SeekBar = ({trackLength,currentPosition,onSeek,onSlidingStart,}) => {
+  const elapsed = minutesAndSeconds(currentPosition); //getting elapsed time
+  const remaining = minutesAndSeconds(trackLength - currentPosition); // getting remaining time
   return (
     <View style={styles.container}>
       <View style={{flexDirection: 'row'}}>
@@ -39,8 +34,7 @@ const SeekBar = ({
           {trackLength > 1 && "-" + remaining[0] + ":" + remaining[1]}
         </Text>
       </View>
-      <Slider
-        maximumValue={Math.max(trackLength, 1, currentPosition + 1)}
+      <Slider maximumValue={Math.max(trackLength, 1, currentPosition + 1)}
         onSlidingStart={onSlidingStart}
         onSlidingComplete={onSeek}
         value={currentPosition}
