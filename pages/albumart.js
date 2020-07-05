@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 const AlbumArt = ({
-  url
+  url,modalfunc
 }) => (
   <View style={styles.container}>
       <Image

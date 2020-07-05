@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {View,Text,Image} from 'react-native'
+import {View,Text,Image,TouchableWithoutFeedback} from 'react-native'
 import Video from 'react-native-video';
 import AlbumArt from './albumart'
 import TrackDetails from './trackdetails'
@@ -61,14 +61,16 @@ onBack = ()=>{
     return (
       <View style={{backgroundColor:'black',height:'100%'}}>
       {video}
+      <TouchableWithoutFeedback onPress={this.props.modalfunc}>
       <View style={{marginTop:'30%'}}>
-        <AlbumArt url={track.albumArtUrl} />
+        <AlbumArt url={track.albumArtUrl}/>
+      </View>
+      </TouchableWithoutFeedback>
         <View style={{marginTop:'7%'}}>
         <Rating />
         <TrackDetails title={track.title} artist={track.artist} />
         <SeekBar onSeek={(data)=>{this.seek(data)}} trackLength={this.state.totalLength} onSlidingStart={() => this.setState({paused: true})} currentPosition={this.state.currentPosition} />
         <Controls onPressPlay={() => this.setState({paused: false})} onPressPause={() => this.setState({paused: true})} paused={this.state.paused} onForward={()=>this.onForward()} onBack={()=>this.onBack()}/>
-          </View>
           </View>
       </View>
     );
