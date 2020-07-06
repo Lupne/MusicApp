@@ -4,7 +4,7 @@ import MusicModal from './pages/musicmodal'
 import Miniplayer from './pages/miniplayer'
 import { LoginButton, AccessToken } from 'react-native-fbsdk';
 
-
+//
 class App extends React.Component{
 
   render(){
