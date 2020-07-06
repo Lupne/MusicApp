@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1092226883873",
+    "firebase_url": "https://melomusic-1594037005545.firebaseio.com",
+    "project_id": "melomusic-1594037005545",
+    "storage_bucket": "melomusic-1594037005545.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092226883873:android:862927ee7d20d7fa95de60",
+        "android_client_info": {
+          "package_name": "com.melopond"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092226883873-lbg5ptt5hdu9si04j66fkvea4ur99gio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsmZmUG4o-gafwN_X7jF3yxY64EPjj8Ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092226883873-lbg5ptt5hdu9si04j66fkvea4ur99gio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
