@@ -15,7 +15,9 @@ class App extends React.Component{
     userInfo:null,
   }
   componentDidMount(){
-    GoogleSignin.configure();
+    GoogleSignin.configure({
+    webClientId: '539991633572-ktm5gpugbectrot4ic605qtuplbtnb0j.apps.googleusercontent.com', // From Firebase Console Settings
+});
   }
   signIn = async () => {
   try {
@@ -46,35 +48,9 @@ signOut = async () => {
   }
 };
   render(){
-    const google = this.state.userInfo?(<GoogleSigninButton
-style={{ width: 192, height: 48 }}
-size={GoogleSigninButton.Size.Wide}
-color={GoogleSigninButton.Color.Dark}
-onPress={this.signOut} />):(<GoogleSigninButton
-style={{ width: 192, height: 48 }}
-size={GoogleSigninButton.Size.Wide}
-color={GoogleSigninButton.Color.Dark}
-onPress={this.signIn} />)
   return (
-    <View style={{alignItems:'center',justifyContent:'center',marginTop:'50%'}}>
-          <LoginButton
-            onLoginFinished={
-              (error, result) => {
-                if (error) {
-                  console.log("login has error: " + result.error);
-                } else if (result.isCancelled) {
-                  console.log("login is cancelled.");
-                } else {
-                  AccessToken.getCurrentAccessToken().then(
-                    (data) => {
-                      console.log(data.accessToken.toString())
-                    }
-                  )
-                }
-              }
-            }
-            onLogoutFinished={() => console.log("logout.")}/>
-            {google}
+        <View style={{flex:1}}>
+        <MusicModal />
         </View>
   );
 }

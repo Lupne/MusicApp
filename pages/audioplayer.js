@@ -55,6 +55,7 @@ onBack = ()=>{
         paused={this.state.paused}               // Pauses playback entirely.
         onLoad={(data)=>{this.setDuration(data)}}    // Callback when video loads
         onProgress={(data)=>{this.setTime(data)}}    // Callback every ~250ms with currentTime
+        playInBackground={true}
         />
     );
 
