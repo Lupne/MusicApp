@@ -7,9 +7,15 @@ import InsidePlaylist from '../pages/insideplaylist'
 const PlaylistStack = createStackNavigator({
     Playlist:{
       screen:Playlist,
+      navigationOptions: {
+        headerShown: false,
+      }
     },
     InsidePlaylist:{
       screen:InsidePlaylist,
+      navigationOptions: {
+        headerShown: false,
+      }
     }
 })
 
