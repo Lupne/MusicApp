@@ -3,6 +3,7 @@ import {  createStackNavigator, HeaderTitle } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import Playlist from '../pages/playlist'
 import InsidePlaylist from '../pages/insideplaylist'
+import Favourites from '../pages/favourites'
 
 const PlaylistStack = createStackNavigator({
     Playlist:{
@@ -16,7 +17,13 @@ const PlaylistStack = createStackNavigator({
       navigationOptions: {
         headerShown: false,
       }
-    }
+    },
+    Favourites:{
+      screen:Favourites,
+      navigationOptions: {
+        headerShown: false,
+      }
+    },
 })
 
 export default createAppContainer(PlaylistStack);
