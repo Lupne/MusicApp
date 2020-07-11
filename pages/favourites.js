@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import {View,FlatList,StyleSheet,Modal,TouchableOpacity,Image} from 'react-native'
 import {  Text, Button,TextInput   } from 'react-native-paper';
 import {  Menu, Divider, Provider } from 'react-native-paper';
-import Feather from 'react-native-vector-icons/Feather'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 class InsidePlaylist extends Component{
   constructor(props) {
@@ -41,7 +41,7 @@ componentDidMount(){
           <Text style={{fontSize:14,color:'white',marginTop:5,fontStyle:'italic'}}>By {item.artist}</Text>
           </View>
           <View style={{right:10,marginTop:35,position:'absolute'}}>
-         <Feather name = 'more-vertical' color='white' size={30} onPress={()=>this.delete(item.id)} />
+                   <AntDesign name = 'delete' color='white' size={30} onPress={()=>this.delete(item.id)}/>
           </View>
           </View>
         )
